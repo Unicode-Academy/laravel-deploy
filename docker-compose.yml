@@ -28,7 +28,7 @@ services:
         restart: unless-stopped
         tty: true
         ports: 
-            - "${MYSQL_HOST_PORT}:${MYSQL_DOCKER_CONTAINER_PORT}"
+            - "3306:3306"
         volumes: 
             - ./mysql:/var/lib/mysql
         environment: 
@@ -49,6 +49,6 @@ services:
         volumes: 
             - ./src:/var/www/app
         ports: 
-            - "${PHP_HOST_PORT}:${PHP_DOCKER_CONTAINER_PORT}"
+            - "8003:8003"
         networks: 
             - laravel
