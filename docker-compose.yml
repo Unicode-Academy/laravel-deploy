@@ -48,6 +48,6 @@ services:
         volumes: 
             - ./src:/var/www/app
         ports: 
-            - "8003:8003"
+            - "8081:8081"
         networks: 
             - laravel
